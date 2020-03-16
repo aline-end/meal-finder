@@ -16,7 +16,7 @@ searchMeal = e => {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
       .then(res => res.json())
       .then(data => {
-        resultHeading.innerHTML = `<h2>Search results for ${term}</h2>`;
+        resultHeading.innerHTML = `<h2>Showing results for ${term}</h2>`;
 
         if (data.meals === null) {
           resultHeading.innerHTML = `<p>There are no results for ${term}. Plase try again.</p>`;
